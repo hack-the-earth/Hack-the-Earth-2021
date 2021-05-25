@@ -1576,6 +1576,15 @@ a:hover.back-to-top {
 	text-align: left;
 }
 
+.sponsorrow{
+	display: flex;
+	align-items: center;
+}
+
+.sponsorcolumn{
+	flex: 25%;
+	padding: 10px;
+}
 
 /*****************************/
 /*     19. Media Queries     */
@@ -1594,6 +1603,8 @@ a:hover.back-to-top {
 		width: 80%;
 		margin-right: auto;
 		margin-left: auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 	/* end of general styles */
 
@@ -2208,5 +2219,10 @@ a:hover.back-to-top {
 		margin-left: 1.75rem;
 	}
 	/* end of extra pages */
+}
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
 }
 /* end of min-width width 1200px */
