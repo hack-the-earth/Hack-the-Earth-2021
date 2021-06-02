@@ -491,8 +491,31 @@ mark,
   height: auto;
 }
 
+.img-partner{
+  width: 100%;
+  height: auto;
+}
+
 .img-sponsor{
+  width: 75%;
+  height: auto;
+}
+
+.img-forestsponsor{
   max-width: 100%;
+  height: auto;
+}
+
+.img-speaker {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.img-judges{
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .figure {
