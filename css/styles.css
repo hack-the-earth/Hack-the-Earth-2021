@@ -1628,12 +1628,20 @@ a:hover.back-to-top {
     box-pack: start;
     justify-content: flex-start;
     box-align: stretch;
-    align-items: stretch;
+    align-items: center;
+	width: 100%;
     box-sizing: border-box;
 }
 
 .judge-name {
 
+}
+
+.judge-info-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2.75rem;
 }
 
 .title-container{
