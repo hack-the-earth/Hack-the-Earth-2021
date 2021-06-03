@@ -1,0 +1,148 @@
+/*************************
+ * GRID SCHEDULE LAYOUT
+ *************************/
+@media screen and (min-width: 700px) {
+  .schedule {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: [tracks] auto [time-0000] auto [time-0100] auto [time-0130] auto [time-0200] auto [time-0900] auto [time-1000] auto [time-1200] auto [time-1300] auto [time-1400] auto [time-1500] auto [time-1600] auto [time-1630] auto [time-1800] auto [time-1900] auto [time-1930] auto [time-2000] auto [time-2030] auto [time-2100] auto [time-2200] auto [time-2300];
+    grid-template-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end];
+  }
+}
+.time-slot {
+  grid-column: times;
+}
+
+.track-slot {
+  display: none;
+  /* hidden on small screens and browsers without grid support */
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 700px) {
+    .track-slot {
+      display: block;
+      padding: 10px 5px 5px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #a7c5eb;
+      text-align: center;
+    }
+  }
+}
+/* Small-screen & fallback styles */
+.session {
+  margin-bottom: 1em;
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 700px) {
+    .session {
+      margin: 0;
+    }
+  }
+}
+/*************************
+   * VISUAL STYLES
+   * Design-y stuff ot particularly important to the demo
+   *************************/
+.calendar {
+  padding: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.session {
+  padding: 0.5em;
+  border-radius: 2px;
+  font-size: 14px;
+  box-shadow: rgba(255, 255, 255, 0.6) 1px 1px 0, rgba(0, 0, 0, 0.3) 4px 4px 0;
+}
+
+.session-title,
+.session-time,
+.session-track,
+.session-presenter {
+  display: block;
+}
+
+.session-title,
+.time-slot {
+  margin: 0;
+  font-size: 1em;
+}
+
+.session-title a {
+  color: #fff !important;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-style: dotted;
+}
+
+.session-title a:focus {
+  outline: 2px dotted rgba(255, 255, 255, 0.8);
+}
+
+.track-slot,
+.time-slot {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.ceremony {
+  background-color: #ff8c00;
+  color: #fff !important;
+}
+
+.workshop {
+  background-color: #f83f3f;
+  color: #fff !important;
+}
+
+.event {
+  background-color: #7f9ec6;
+  color: #fff !important;
+}
+
+.meetup {
+  background-color: #8db596;
+  color: #fff !important;
+}
+
+.misc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  color: #000;
+}
+
+.track-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  color: #000;
+  font-size: 20px;
+  box-shadow: none;
+}
+
+.calendar .text {
+  max-width: 750px;
+  font-size: 18px;
+  margin: 0 auto 50px;
+}
+
+.calendar .meta {
+  color: #555;
+  font-style: italic;
+}
+
+.calendar .meta a {
+  color: #555;
+}
+
+.calendar hr {
+  margin: 40px 0;
+}

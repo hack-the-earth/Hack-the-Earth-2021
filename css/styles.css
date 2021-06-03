@@ -1633,10 +1633,6 @@ a:hover.back-to-top {
     box-sizing: border-box;
 }
 
-.judge-name {
-
-}
-
 .judge-info-container{
 	display: flex;
 	flex-direction: column;
